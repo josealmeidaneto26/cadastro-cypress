@@ -1,5 +1,5 @@
 describe('template spec', () => {
-  it('passes', () => {
+  it('cadastro autmatico', () => {
 
 
     //para entrar no site
@@ -40,6 +40,29 @@ cy.contains('Cadastrar-se').click()
 cy.contains('Escolha seu nome de usuário').should('be.visible')
 
 
+
+})
+it.only('login ', () => {
+
+  cy.visit('https://meupc.net/')
+
+
+
+  cy.wait(1000)
+
+  cy.get('.navbar-burger').click()
+
+  cy.get('ul.menu-list')
+
+  .children('li')
+
+  .children('a[href="https://meupc.net/login"]')
+
+  .click()
+
+
+
+  cy.contains('Email ou nome de usuário').type('testecypress@tuamaeaquelaursa.com')
 
 })
 })
